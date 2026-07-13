@@ -451,9 +451,12 @@
             });
           });
 
-          // Update tab bar background
-          document.getElementById("tab-bar").style.backgroundColor =
-            tabColors[current];
+          // [수정된 부분] 탭바 배경색 업데이트: style 대신 클래스 교체
+          const tabBar = document.getElementById("tab-bar");
+          // 기존 색상 클래스들 제거
+          tabBar.classList.remove("bg-lime-100", "bg-green-200", "bg-indigo-200");
+          // 선택된 날짜의 클래스 추가
+          tabBar.classList.add(tabColors[current]);
 
           // Highlight active tab
           const nextBtn = document.getElementById(tabBtns[current]);
