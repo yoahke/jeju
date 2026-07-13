@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JEJU 旅行</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: "CMMCoda";
+        src: url("CMMCodaUnlicensedTrial-Proportional.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      * {
+        font-family: "CMMCoda", serif;
+      }
+
+      /* 패널 전환 애니메이션 */
+      .day-panel {
+        display: none;
+        opacity: 0;
+        transform: translateY(8px);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+      .day-panel.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* 탭바 색상 전환 */
+      #tab-bar {
+        transition: background-color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="flex justify-center items-center min-h-screen bg-zinc-100">
+    <div class="w-96 flex flex-col" style="height: 812px">
+      <!-- ───────────── DAY 1 ───────────── -->
+      <div
+        id="panel-1"
+        class="day-panel active flex-col bg-lime-100 flex-1 overflow-hidden"
+      >
+        <div class="flex flex-col gap-12 p-5 h-full">
+          <!-- Header -->
+          <div
+            class="self-stretch inline-flex justify-start items-start gap-[5px]"
+          >
+            <div class="flex-1 text-zinc-800 text-2xl">JEJU</div>
+            <div class="text-zinc-800 text-2xl">旅行</div>
+          </div>
+          <!-- Schedule -->
+          <div
+            class="flex-1 flex flex-col justify-start items-start gap-2.5 overflow-y-auto"
+          >
+            <!-- Date -->
+            <div
+              class="self-stretch py-2.5 border-b border-zinc-800 inline-flex justify-center items-center"
+            >
+              <div class="flex-1 text-zinc-800 text-base">7月 15日</div>
+            </div>
+            <!-- Rows -->
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">07:25</div>
+              <div class="text-zinc-800 text-sm">김포 → 제주</div>
+              <div class="text-zinc-800 text-sm ml-2">LJ512</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">08:30</div>
+              <div class="flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">렌트카 픽업</div>
+                <div class="text-zinc-600 text-xs">SUV</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">09:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">아침</div>
+                <div class="text-zinc-800 text-xs">산지해장국</div>
+                <div class="text-zinc-800 text-xs">은희네해장국</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">12:00</div>
+              <div class="flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">Bonte Museum</div>
+                <div class="text-zinc-600 text-xs">12시 전까지 입장 必</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">13:00</div>
+              <div class="flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">점심</div>
+                <div class="text-zinc-800 text-xs">번네식당 (순살갈치조림)</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm flex items-center">
+                <!-- coffee cup SVG -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+                  <line x1="6" x2="6" y1="2" y2="4" />
+                  <line x1="10" x2="10" y1="2" y2="4" />
+                  <line x1="14" x2="14" y1="2" y2="4" />
+                </svg>
+              </div>
+              <div class="flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">풀배게</div>
+                <div class="text-zinc-800 text-sm">믈커피 로스터스 본점</div>
+                <div class="text-zinc-800 text-sm">패스브루</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">TBD</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">영락리방파제</div>
+                <div class="text-zinc-600 text-xs">돌고래 명소</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">15:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">호텔 체크인</div>
+                <div class="text-zinc-800 text-xs">Hotel Fine Jeju</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">TBD</div>
+              <div class="text-zinc-800 text-sm">Breakdance</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">20:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">저녁</div>
+                <div class="text-zinc-800 text-xs">올레시장 근처 탐방</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── DAY 2 ───────────── -->
+      <div
+        id="panel-2"
+        class="day-panel flex-col bg-green-200 flex-1 overflow-hidden"
+      >
+        <div class="flex flex-col gap-12 p-5 h-full">
+          <!-- Header -->
+          <div
+            class="self-stretch inline-flex justify-start items-start gap-[5px]"
+          >
+            <div class="flex-1 text-zinc-800 text-2xl">JEJU</div>
+            <div class="text-zinc-800 text-2xl">旅行</div>
+          </div>
+          <!-- Schedule -->
+          <div
+            class="flex-1 flex flex-col justify-start items-start gap-2.5 overflow-y-auto"
+          >
+            <div
+              class="self-stretch py-2.5 border-b border-zinc-800 inline-flex justify-center items-center"
+            >
+              <div class="flex-1 text-zinc-800 text-base">7月 16日</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">09:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">아침</div>
+                <div class="text-zinc-800 text-xs">서귀포국수마을</div>
+                <div class="text-zinc-800 text-xs">풍년식당</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">TBD</div>
+              <div class="text-zinc-800 text-sm">백한철꽈배기</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">10:00</div>
+              <div class="flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">제주마 방목지</div>
+                <div class="text-zinc-600 text-xs">입장료 무료</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">12:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">점심</div>
+                <div class="text-zinc-800 text-xs">낭뜰에쉼팡 (고등어구이)</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">13:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">신흥해수욕장</div>
+                <div class="text-zinc-600 text-xs">헤엄</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+                  <line x1="6" x2="6" y1="2" y2="4" />
+                  <line x1="10" x2="10" y1="2" y2="4" />
+                  <line x1="14" x2="14" y1="2" y2="4" />
+                </svg>
+              </div>
+              <div class="text-zinc-800 text-sm">무우수 커피 로스터스</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">TBD</div>
+              <div class="text-zinc-800 text-sm">Breakdance</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">20:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">저녁</div>
+                <div class="text-zinc-800 text-xs">명가솥뚜껑 서귀포흑돼지</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── DAY 3 ───────────── -->
+      <div
+        id="panel-3"
+        class="day-panel flex-col bg-indigo-200 flex-1 overflow-hidden"
+      >
+        <div class="flex flex-col gap-12 p-5 h-full">
+          <!-- Header -->
+          <div
+            class="self-stretch inline-flex justify-start items-start gap-[5px]"
+          >
+            <div class="flex-1 text-zinc-800 text-2xl">JEJU</div>
+            <div class="text-zinc-800 text-2xl">旅行</div>
+          </div>
+          <!-- Schedule -->
+          <div
+            class="flex-1 flex flex-col justify-start items-start gap-2.5 overflow-y-auto"
+          >
+            <div
+              class="self-stretch py-2.5 border-b border-zinc-800 inline-flex justify-center items-center"
+            >
+              <div class="flex-1 text-zinc-800 text-base">7月 17日</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">09:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">아침</div>
+                <div class="text-zinc-800 text-xs">오는정김밥</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">11:00</div>
+              <div class="text-zinc-800 text-sm">호텔 체크아웃</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">12:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">유동룡미술관</div>
+                <div class="text-zinc-600 text-xs">사전 예약</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">14:00</div>
+              <div class="flex-1 flex flex-col gap-[5px]">
+                <div class="text-zinc-800 text-sm">점심</div>
+                <div class="text-zinc-800 text-xs">명랑스낵 (한치튀김 꼭)</div>
+              </div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+                  <line x1="6" x2="6" y1="2" y2="4" />
+                  <line x1="10" x2="10" y1="2" y2="4" />
+                  <line x1="14" x2="14" y1="2" y2="4" />
+                </svg>
+              </div>
+              <div class="text-zinc-800 text-sm">로스터리 묵음</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">TBD</div>
+              <div class="text-zinc-800 text-sm">Digging</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">19:00</div>
+              <div class="text-zinc-800 text-sm">렌트카 반납</div>
+            </div>
+            <div
+              class="self-stretch inline-flex justify-start items-start gap-[5px]"
+            >
+              <div class="w-20 text-zinc-800 text-sm">21:15</div>
+              <div class="text-zinc-800 text-sm">제주 → 김포</div>
+              <div class="text-zinc-800 text-sm ml-2">LJ512</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── TAB BAR ───────────── -->
+      <div
+        id="tab-bar"
+        class="w-full px-5 py-3 bg-lime-100 inline-flex justify-between items-center"
+      >
+        <button
+          onclick="switchTab(1)"
+          id="tab-btn-1"
+          class="tab-btn w-20 py-2.5 text-sm text-zinc-800 border-b-2 border-zinc-800 text-center"
+          style="font-family: &quot;CMMCoda&quot;, serif"
+        >
+          1day
+        </button>
+        <button
+          onclick="switchTab(2)"
+          id="tab-btn-2"
+          class="tab-btn w-20 py-2.5 text-sm text-zinc-800 border-b-2 border-transparent text-center"
+          style="font-family: &quot;CMMCoda&quot;, serif"
+        >
+          2day
+        </button>
+        <button
+          onclick="switchTab(3)"
+          id="tab-btn-3"
+          class="tab-btn w-20 py-2.5 text-sm text-zinc-800 border-b-2 border-transparent text-center"
+          style="font-family: &quot;CMMCoda&quot;, serif"
+        >
+          3day
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const panels = [null, "panel-1", "panel-2", "panel-3"];
+      const tabBtns = [null, "tab-btn-1", "tab-btn-2", "tab-btn-3"];
+      const tabColors = [null, "#E5FFC9", "#BDFFE2", "#C9D4FF"]; // lime-100, green-200, indigo-200
+
+      let current = 1;
+
+      function switchTab(day) {
+        // Hide current
+        const prevPanel = document.getElementById(panels[current]);
+        prevPanel.classList.remove("active");
+
+        // Reset current tab underline
+        const prevBtn = document.getElementById(tabBtns[current]);
+        prevBtn.classList.remove("border-zinc-800");
+        prevBtn.classList.add("border-transparent");
+
+        // Small delay so CSS transition fires correctly
+        setTimeout(() => {
+          prevPanel.style.display = "none";
+
+          // Show new
+          current = day;
+          const nextPanel = document.getElementById(panels[current]);
+          nextPanel.style.display = "flex";
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              nextPanel.classList.add("active");
+            });
+          });
+
+          // Update tab bar background
+          document.getElementById("tab-bar").style.backgroundColor =
+            tabColors[current];
+
+          // Highlight active tab
+          const nextBtn = document.getElementById(tabBtns[current]);
+          nextBtn.classList.add("border-zinc-800");
+          nextBtn.classList.remove("border-transparent");
+        }, 280);
+      }
+    </script>
+  </body>
+</html>
