@@ -429,6 +429,10 @@
       const tabColors = [null, "bg-lime-100", "bg-green-200", "bg-indigo-200"];
       let current = 1;
 
+      window.onload = () => {
+        switchTab(1);
+      };
+
       function switchTab(day) {
         // Hide current
         const prevPanel = document.getElementById(panels[current]);
